@@ -18,7 +18,7 @@ const contacto = () => {
 				<div className='hidden xsm:flex xsm:flex-row xsm:h-[520px] xsm:mb-28 2xl:w-[1440px]'>
 					<div className='w-1/2'>
 						<div className='px-14 md:px-28 bg-silver'>
-							<Map height={520} />
+							<Map />
 						</div>
 					</div>
 					<div className='w-1/2'>
