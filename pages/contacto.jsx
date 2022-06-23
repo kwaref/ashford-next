@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Map } from '../components/ui/Map'
+import { MapBotton, MapTop } from '../components/ui/Map'
 
 const contacto = () => {
 	return (
@@ -18,7 +18,7 @@ const contacto = () => {
 				<div className='hidden xsm:flex xsm:flex-row xsm:h-[520px] xsm:mb-28 2xl:w-[1440px]'>
 					<div className='w-1/2'>
 						<div className='px-14 md:px-28 bg-silver'>
-							<Map />
+							<MapTop />
 						</div>
 					</div>
 					<div className='w-1/2'>
@@ -322,7 +322,7 @@ const contacto = () => {
 				</div>
 			</div>
 			<div className='p-0 xs:pb-28 bg-silver xsm:hidden'>
-				<Map height={340} />
+				<MapBotton />
 			</div>
 		</div>
 	)
