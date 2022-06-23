@@ -1,13 +1,13 @@
 import React from 'react'
 import { Card } from './Card'
 
-export const CardList = ({cards}) => {
+export const CardList = ({ cards }) => {
 	return (
-		<div className='pt-16 px-4 pb-12 bg-lightSilver'>
-			<p className='text-2xl text-navyFooter font-extralight text-center'>
+		<div className='flex flex-col pt-16 xxs:pt-28 px-4 pb-12 bg-lightSilver items-center justify-around'>
+			<p className='text-2xl xxs:text-[32px] text-navyFooter font-extralight text-center'>
 				¡Saludos! ¿Cómo podríamos ayudarle?
 			</p>
-			<div className='flex flex-col pt-[50px] items-center'>
+			<div className='flex flex-col hxs:flex-row hxs:flex-wrap pt-[50px] justify-center'>
 				{cards.map(({ icon, question, answer }) => (
 					<Card
 						key={question}
