@@ -40,26 +40,11 @@ const cards = [
 
 export default function Home() {
 	return (
-		<div className='flex flex-col'>
+		<div id='home' className='flex flex-col'>
 			<main>
 				<Marquee text={message} />
 				<Hero />
 				<CardList cards={cards} />
-				{/* <div className='pt-16 px-4 pb-12 bg-lightSilver'>
-					<p className='text-2xl text-navyFooter font-extralight text-center'>
-						¡Saludos! ¿Cómo podríamos ayudarle?
-					</p>
-					<div className='flex flex-col pt-[50px] items-center'>
-						{cards.map(({ icon, question, answer }) => (
-							<Card
-								key={question}
-								icon={icon}
-								question={question}
-								answer={answer}
-							/>
-						))}
-					</div>
-				</div> */}
 				<div className=''></div>
 				<div className=''></div>
 				<div className=''></div>

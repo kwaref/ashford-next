@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export const Hero = () => {
@@ -25,15 +26,17 @@ export const Hero = () => {
 						</div>
 						<div className='flex w-full py-8'></div>
 						<div className='hidden h-[121.19px] xxs:flex xxs:flex-row justify-around items-start'>
-							<div className='h-[57.34px] self-end cursor-pointer sticky bottom-0'>
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									className='w-[25px] h-[25px] transition ease-in-out hover:scale-125 duration-500'
-									viewBox='0 0 24 24'
-									fill='#EFF3F8'>
-									<path d='M17.71,11.29a1,1,0,0,0-1.42,0L13,14.59V7a1,1,0,0,0-2,0v7.59l-3.29-3.3a1,1,0,0,0-1.42,1.42l5,5a1,1,0,0,0,.33.21.94.94,0,0,0,.76,0,1,1,0,0,0,.33-.21l5-5A1,1,0,0,0,17.71,11.29Z'></path>
-								</svg>
-							</div>
+							<Link href='#cards'>
+								<div className='h-[57.34px] self-end cursor-pointer sticky bottom-0'>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										className='w-[25px] h-[25px] transition ease-in-out hover:scale-150 duration-200'
+										viewBox='0 0 24 24'
+										fill='#EFF3F8'>
+										<path d='M17.71,11.29a1,1,0,0,0-1.42,0L13,14.59V7a1,1,0,0,0-2,0v7.59l-3.29-3.3a1,1,0,0,0-1.42,1.42l5,5a1,1,0,0,0,.33.21.94.94,0,0,0,.76,0,1,1,0,0,0,.33-.21l5-5A1,1,0,0,0,17.71,11.29Z'></path>
+									</svg>
+								</div>
+							</Link>
 						</div>
 					</div>
 				</div>

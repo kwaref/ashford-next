@@ -3,7 +3,7 @@ import { Card } from './Card'
 
 export const CardList = ({ cards }) => {
 	return (
-		<div className='flex flex-col pt-16 xxs:pt-28 px-4 pb-12 bg-lightSilver items-center justify-around'>
+		<div id='cards' className='flex flex-col pt-16 xxs:pt-28 px-4 pb-12 bg-lightSilver items-center justify-around'>
 			<p className='text-2xl xxs:text-[32px] text-navyFooter font-extralight text-center'>
 				¡Saludos! ¿Cómo podríamos ayudarle?
 			</p>
