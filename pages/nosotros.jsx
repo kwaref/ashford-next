@@ -55,7 +55,7 @@ const nosotros = () => {
 			<div>
 				<div
 					id='sobre'
-					className='flex flex-col pt-10 pb-16 px-4 md:p-28 bg-silver'>
+					className='flex flex-col 2xl:mx-[calc((100vw-1440px)/2)] pt-10 pb-16 px-4 md:p-28 bg-silver'>
 					<div className='text-[10px] text-greenArrow font-semibold uppercase'>
 						sobre nosotros
 					</div>
@@ -121,7 +121,7 @@ const nosotros = () => {
 													index > 0 ? 'xsm:w-1/2' : ''
 												} flex mt-8`}>
 												<div
-													className={`w-full rounded h-[calc(49.45vw)] xsm:h-[240px] ${
+													className={`w-full lg:w-[450px] rounded h-[calc(49.45vw)] xsm:h-[240px] ${
 														index % 2 == 0 ? '' : 'xsm:h-[313px]'
 													} ${index == 4 ? 'xsm:h-[278px]' : ''} relative`}>
 													<Image
@@ -135,12 +135,12 @@ const nosotros = () => {
 											</div>
 											<div
 												className={`${
-													index > 0 ? 'xsm:w-1/2' : ''
+													index > 0 ? 'xsm:w-1/2 lg:h-[408px]' : ''
 												} pt-8 text-base text-blackNavlink font-light ${
 													index > 0 && index % 2 != 0 ? 'xsm:pl-8' : ''
 												}
 													${index > 0 && index % 2 == 0 ? 'xsm:pr-8' : ''}`}>
-												<p>{description}</p>
+												<p className='flex'>{description}</p>
 											</div>
 										</div>
 									</div>

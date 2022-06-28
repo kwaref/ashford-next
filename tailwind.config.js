@@ -7,7 +7,7 @@ module.exports = {
 		screens: {
 			xxs: '576px',
 			xs: '577px',
-			hxs:'724px',
+			hxs: '724px',
 			emexs: '756px',
 			xsm: '768px',
 			ssm: '791px',
@@ -20,9 +20,10 @@ module.exports = {
 			lg: '1024px',
 			xl: '1057px',
 			xxl: '1068px',
-			s3xl:'1070px',
+			s3xl: '1070px',
 			xxxl: '1136px',
 			s4xl: '1200px',
+			m4xl:'1305px',
 			ivxl: '1400px',
 			'2xl': '1440px',
 		},
@@ -36,6 +37,7 @@ module.exports = {
 				silverMedia: '#cbd4e1',
 				silverContact: '#EFF3F8',
 				cardSmallText: '#8994a7',
+				interestBlue: '#01426A',
 			},
 		},
 		images: {
