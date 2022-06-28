@@ -8,7 +8,7 @@ export const Interest = () => {
 			<div className='flex flex-col bg-interestBlue pb-12 xsm:py-12 xsm:px-10 md:px-28 2xl:mx-[calc((100vw-1440px)/2)]'>
 				<div>
 					<div className='flex flex-col xsm:flex-row'>
-						<div className='pb-10 xsm:w-1/2 xsm:pb-0'>
+						<div className='pb-10 xsm:w-1/2 xsm:pb-0 m4xl:h-[calc(100vw/2.41)] 2xl:h-[601.11px]'>
 							<div className='flex xsm:pr-12 w-full xsm:h-full relative'>
 								<Image
 									src={interest}
@@ -18,8 +18,8 @@ export const Interest = () => {
 								/>
 							</div>
 						</div>
-						<div className='px-4 xsm:w-1/2 xsm:p-0 flex-col m4xl:flex m4xl:justify-around'>
-							<div className='flex flex-col'>
+						<div className='px-4 xsm:w-1/2 xsm:p-0 flex flex-col'>
+							<div className='flex flex-col m4xl:h-[calc(100vw/2.41)] 2xl:h-[601.11px] m4xl:justify-center'>
 								<p className='mb-4 text-sm xxs:text-[11.5px] xxs:font-bold text-greenArrow uppercase'>
 									datos de interés
 								</p>
