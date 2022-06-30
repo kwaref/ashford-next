@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Slide from 'react-reveal/Slide'
 import img1 from '/public/images/1.webp'
 import img2 from '/public/images/2.webp'
 import img3 from '/public/images/3.webp'
@@ -51,7 +52,7 @@ const reveals = [
 
 const nosotros = () => {
 	return (
-		<main className='flex flex-col'>
+		<main className='flex flex-col bg-silver'>
 			<div>
 				<div
 					id='sobre'
@@ -84,67 +85,69 @@ const nosotros = () => {
 					<div>
 						{reveals.map(({ year, header, image, alt, description }, index) => {
 							return (
-								<div
-									key={year}
-									className='mb-8 pb-8 xsm:mb-16 xsm:pb-16 border-b-2'>
+								<Slide bottom key={year}>
 									<div
-										className={`flex flex-col xsm:flex-row ${
-											index % 2 == 0 ? '' : 'xsm:flex-row-reverse'
-										}`}>
-										<div className='flex flex-col xsm:w-[283.72px]'>
-											<div
-												className={`flex flex-row w-full ${
-													index % 2 == 0 ? '' : 'xsm:flex-row-reverse'
-												}`}>
-												<p className='text-5xl font-bold'>{year}</p>
-												<div className='w-[88px] h-[2px] mx-8 text-4xl font-light'>
-													_____
-												</div>
-											</div>
-											<p
-												className={`text-base text-greenArrow ${
-													index % 2 == 0 ? '' : 'xsm:text-right'
-												}`}>
-												{header}
-											</p>
-										</div>
+										key={year}
+										className='mb-8 pb-8 xsm:mb-16 xsm:pb-16 border-b-2'>
 										<div
-											className={`flex flex-col xsm:w-[calc(100%-283.72px)] ${
-												index > 0 ? 'xsm:flex-row' : ''
-											} ${
-												index % 2 == 0 && index > 0
-													? 'xsm:flex-row-reverse'
-													: ''
+											className={`flex flex-col xsm:flex-row ${
+												index % 2 == 0 ? '' : 'xsm:flex-row-reverse'
 											}`}>
-											<div
-												className={`w-full ${
-													index > 0 ? 'xsm:w-1/2' : ''
-												} flex mt-8`}>
+											<div className='flex flex-col xsm:w-[283.72px]'>
 												<div
-													className={`w-full lg:w-[450px] rounded h-[calc(49.45vw)] xsm:h-[240px] ${
-														index % 2 == 0 ? '' : 'xsm:h-[313px]'
-													} ${index == 4 ? 'xsm:h-[278px]' : ''} relative`}>
-													<Image
-														src={image}
-														alt={alt}
-														layout='fill'
-														objectFit='cover'
-														className='rounded'
-													/>
+													className={`flex flex-row w-full ${
+														index % 2 == 0 ? '' : 'xsm:flex-row-reverse'
+													}`}>
+													<p className='text-5xl font-bold'>{year}</p>
+													<div className='w-[88px] h-[2px] mx-8 text-4xl font-light'>
+														_____
+													</div>
 												</div>
+												<p
+													className={`text-base text-greenArrow ${
+														index % 2 == 0 ? '' : 'xsm:text-right'
+													}`}>
+													{header}
+												</p>
 											</div>
 											<div
-												className={`${
-													index > 0 ? 'xsm:w-1/2 lg:h-[408px]' : ''
-												} pt-8 text-base text-blackNavlink font-light ${
-													index > 0 && index % 2 != 0 ? 'xsm:pl-8' : ''
-												}
-													${index > 0 && index % 2 == 0 ? 'xsm:pr-8' : ''}`}>
-												<p className='flex'>{description}</p>
+												className={`flex flex-col xsm:w-[calc(100%-283.72px)] ${
+													index > 0 ? 'xsm:flex-row' : ''
+												} ${
+													index % 2 == 0 && index > 0
+														? 'xsm:flex-row-reverse'
+														: ''
+												}`}>
+												<div
+													className={`w-full ${
+														index > 0 ? 'xsm:w-1/2' : ''
+													} flex mt-8`}>
+													<div
+														className={`w-full lg:w-[450px] rounded h-[calc(49.45vw)] xsm:h-[240px] ${
+															index % 2 == 0 ? '' : 'xsm:h-[313px]'
+														} ${index == 4 ? 'xsm:h-[278px]' : ''} relative`}>
+														<Image
+															src={image}
+															alt={alt}
+															layout='fill'
+															objectFit='cover'
+															className='rounded'
+														/>
+													</div>
+												</div>
+												<div
+													className={`${
+														index > 0 ? 'xsm:w-1/2 lg:h-[408px]' : ''
+													} pt-8 text-base text-blackNavlink font-light ${
+														index > 0 && index % 2 != 0 ? 'xsm:pl-8' : ''
+													}
+														${index > 0 && index % 2 == 0 ? 'xsm:pr-8' : ''}`}>
+													<p className='flex'>{description}</p>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</Slide>
 							)
 						})}
 						<p className='text-lg text-greenArrow'>

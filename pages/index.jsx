@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Hero } from '../components/ui/Hero'
 import Marquee from '../components/ui/Marquee'
 import esteto from '../public/images/esteto.svg'
@@ -7,8 +6,8 @@ import adn from '../public/images/adn.svg'
 import person from '../public/images/person.svg'
 import { CardList } from '../components/ui/CardList'
 import 'animate.css'
-import interest from '/public/images/interest.webp'
 import { Interest } from '../components/ui/Interest'
+import CardSwiper from '../components/ui/Swiper'
 
 const message = 'Vacunación Covid-19 | Lunes-Viernes 8:30am-3:00pm'
 
@@ -48,9 +47,8 @@ export default function Home() {
 				<Hero />
 				<CardList cards={cards} />
 				<Interest />
-
-				<div id='carrousel' className=''></div>
-				<div className=''></div>
+				<CardSwiper/>
+				<div className='pt-16 pb-8'>sdfh</div>
 				<div className=''></div>
 			</main>
 		</div>

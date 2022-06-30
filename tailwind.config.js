@@ -14,6 +14,7 @@ module.exports = {
 			sm: '800px',
 			msm: '814px',
 			xsd: '860px',
+			ssd: '900px',
 			sd: '916px',
 			xmd: '956px',
 			md: '992px',
@@ -23,7 +24,8 @@ module.exports = {
 			s3xl: '1070px',
 			xxxl: '1136px',
 			s4xl: '1200px',
-			m4xl:'1305px',
+			m4xl: '1305px',
+			g4xl: '1320px',
 			ivxl: '1400px',
 			'2xl': '1440px',
 		},
@@ -38,6 +40,10 @@ module.exports = {
 				silverContact: '#EFF3F8',
 				cardSmallText: '#8994a7',
 				interestBlue: '#01426A',
+			},
+			backgroundImage: {
+				'split-blue-white':
+					'linear-gradient(to bottom, #01426A 50%, white 50%)',
 			},
 		},
 		images: {
