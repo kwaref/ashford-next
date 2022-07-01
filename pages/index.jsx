@@ -8,6 +8,8 @@ import { CardList } from '../components/ui/CardList'
 import 'animate.css'
 import { Interest } from '../components/ui/Interest'
 import CardSwiper from '../components/ui/Swiper'
+import Link from 'next/link'
+import { Especialidades } from '../components/ui/Especialidades'
 
 const message = 'Vacunación Covid-19 | Lunes-Viernes 8:30am-3:00pm'
 
@@ -39,6 +41,24 @@ const cards = [
 	},
 ]
 
+const especialidades = [
+	{ name: 'OB-Gyn/Ginecología', short: 'OB-G', href: '' },
+	{ name: 'Unidad NICU', short: 'NICU', href: '' },
+	{ name: 'Cirugía colorrectal', short: 'Cc', href: '' },
+	{ name: 'Ortopedia', short: 'Or', href: '' },
+	{
+		name: 'Medicina física, deportiva y rehabilitación',
+		short: 'FdR',
+		href: '',
+	},
+	{ name: 'Otorrinolaringología', short: 'Ot', href: '' },
+	{ name: 'Endocrinología', short: 'En', href: '' },
+	{ name: 'Cirugía general', short: 'Cg', href: '' },
+	{ name: 'Cirugía oncológica', short: 'Co', href: '' },
+	{ name: 'Pediatría', short: 'Pe', href: '' },
+	{ name: 'Urología', short: 'Ur', href: '' },
+]
+
 export default function Home() {
 	return (
 		<div id='home' className='flex flex-col'>
@@ -47,8 +67,8 @@ export default function Home() {
 				<Hero />
 				<CardList cards={cards} />
 				<Interest />
-				<CardSwiper/>
-				<div className='pt-16 pb-8'>sdfh</div>
+				<CardSwiper />
+				<Especialidades especialidades={especialidades} />
 				<div className=''></div>
 			</main>
 		</div>
