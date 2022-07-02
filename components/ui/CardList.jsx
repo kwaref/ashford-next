@@ -11,8 +11,8 @@ export const CardList = ({ cards }) => {
 				¡Saludos! ¿Cómo podríamos ayudarle?
 			</p>
 			<div className='flex flex-col hxs:flex-row hxs:flex-wrap pt-[50px] justify-center'>
-				{cards.map(({ icon, question, answer }) => (
-					<Slide bottom key={question}>
+				{cards.map(({ icon, question, answer }, index) => (
+					<Slide bottom delay={index*100} key={question}>
 						<Card
 							key={question}
 							icon={icon}
