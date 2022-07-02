@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-export const Especialidad = ({esp}) => {
+export const Especialidad = ({ esp }) => {
 	return (
 		<Link key={esp.short} href={esp.href}>
-			<div className='flex p-2 xxs:flex-col xxs:w-[196px] xxs:h-[125px] xxs:items-center'>
+			<div className='flex p-2 xxs:flex-col xxs:w-[196px] xxs:h-[125px] xxs:items-center cursor-pointer'>
 				<div className=''>
 					<div>
 						<div className='flex w-[61px] h-[61px] text-navyFooter bg-navyFooter rounded-lg items-center justify-center'>

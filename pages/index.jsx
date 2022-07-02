@@ -10,6 +10,7 @@ import { Interest } from '../components/ui/Interest'
 import CardSwiper from '../components/ui/Swiper'
 import Link from 'next/link'
 import { Especialidades } from '../components/ui/Especialidades'
+import { Servicios } from '../components/ui/Servicios'
 
 const message = 'Vacunación Covid-19 | Lunes-Viernes 8:30am-3:00pm'
 
@@ -42,21 +43,89 @@ const cards = [
 ]
 
 const especialidades = [
-	{ name: 'OB-Gyn/Ginecología', short: 'OB-G', href: '' },
-	{ name: 'Unidad NICU', short: 'NICU', href: '' },
-	{ name: 'Cirugía colorrectal', short: 'Cc', href: '' },
-	{ name: 'Ortopedia', short: 'Or', href: '' },
+	{
+		name: 'OB-Gyn/Ginecología',
+		short: 'OB-G',
+		href: '/especialidades#obstetricia_ginecologia_ginecologia-oncologica',
+	},
+	{ name: 'Unidad NICU', short: 'NICU', href: '/especialidades#nicu' },
+	{
+		name: 'Cirugía colorrectal',
+		short: 'Cc',
+		href: '/especialidades#cirugia-colorrectal',
+	},
+	{ name: 'Ortopedia', short: 'Or', href: '/especialidades#ortopedia' },
 	{
 		name: 'Medicina física, deportiva y rehabilitación',
 		short: 'FdR',
-		href: '',
+		href: '/especialidades#medicina-deportiva',
 	},
-	{ name: 'Otorrinolaringología', short: 'Ot', href: '' },
-	{ name: 'Endocrinología', short: 'En', href: '' },
-	{ name: 'Cirugía general', short: 'Cg', href: '' },
-	{ name: 'Cirugía oncológica', short: 'Co', href: '' },
-	{ name: 'Pediatría', short: 'Pe', href: '' },
-	{ name: 'Urología', short: 'Ur', href: '' },
+	{
+		name: 'Otorrinolaringología',
+		short: 'Ot',
+		href: '/especialidades#otorrinolaringologia',
+	},
+	{
+		name: 'Endocrinología',
+		short: 'En',
+		href: '/especialidades#endocrinologia',
+	},
+	{
+		name: 'Cirugía general',
+		short: 'Cg',
+		href: '/especialidades#cirugia-general',
+	},
+	{
+		name: 'Cirugía oncológica',
+		short: 'Co',
+		href: '/especialidades#cirugia-oncologica',
+	},
+	{ name: 'Pediatría', short: 'Pe', href: '/especialidades#pediatria' },
+	{ name: 'Urología', short: 'Ur', href: '/especialidades#urologia' },
+]
+
+const servicios = [
+	{
+		name: 'Radiología/Centro de imágenes',
+		short: 'OB-G',
+		href: '/servicios#laboratorio',
+	},
+	{ name: 'Laboratorio', short: 'NICU', href: '' },
+	{
+		name: 'Cuidado de heridas',
+		short: 'Cc',
+		href: '/servicios#cuidado-de-heridas',
+	},
+	{
+		name: 'Centro de medicina física y rehabilitación ',
+		short: 'Or',
+		href: '/servicios#centro-de-medicina-fisica_rehabilitacionservicios#centro-de-medicina-fisica_rehabilitacion',
+	},
+	{
+		name: 'Ashford Prenatal',
+		short: 'FdR',
+		href: '/servicios#centro-prenatal',
+	},
+	{
+		name: 'Centro de vacunación',
+		short: 'Ot',
+		href: '/servicios#centro-de-vacunacion',
+	},
+	{
+		name: 'Clínica de cardiología',
+		short: 'En',
+		href: '/servicios#medicina-nuclear_centro-de-cardiologia',
+	},
+	{
+		name: 'Centro de la mujer',
+		short: 'Cg',
+		href: '/servicios#centro-de-la-mujer',
+	},
+	{
+		name: 'Farmacia de la comunidad',
+		short: 'Co',
+		href: '/servicios#farmacia-de-la-comunidad',
+	},
 ]
 
 export default function Home() {
@@ -69,6 +138,7 @@ export default function Home() {
 				<Interest />
 				<CardSwiper />
 				<Especialidades especialidades={especialidades} />
+				<Servicios servicios={servicios} />
 				<div className=''></div>
 			</main>
 		</div>
