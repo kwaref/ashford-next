@@ -2,36 +2,15 @@ import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Fade } from 'react-reveal'
+import { useWindowSize } from '../../hooks/useWindowSize'
 
 const SliderCard = ({ card }) => {
 	const [show, setShow] = useState(false)
-	const [windowSize, setWindowSize] = useState({})
-
-	useEffect(() => {
-		const getWindowSize = () => {
-			if (typeof window === 'undefined') {
-				global.window = {}
-			}
-			const { innerWidth, innerHeight } = window
-			return { innerWidth, innerHeight }
-		}
-
-		function handleWindowResize() {
-			setWindowSize(getWindowSize())
-		}
-
-		window.addEventListener('resize', handleWindowResize)
-		window.addEventListener('load', handleWindowResize)
-
-		return () => {
-			window.removeEventListener('resize', handleWindowResize)
-			window.removeEventListener('load', handleWindowResize)
-		}
-	}, [])
+	const { innerWidth } = useWindowSize({})
 
 	return (
 		<Link
-			href={windowSize.innerWidth >= 1024 ? '' : `${card.href}`}
+			href={innerWidth >= 1024 ? '' : `${card.href}`}
 			onMouseEnter={() => setShow(true)}
 			onMouseLeave={() => setShow(false)}>
 			<div
@@ -58,7 +37,7 @@ const SliderCard = ({ card }) => {
 						leave='transition-opacity duration-150'
 						leaveFrom='opacity-100'
 						leaveTo='opacity-0'> */}
-            
+
 					<div className='hidden lg:group-hover:block'>
 						<Link href={card.href}>
 							<button
